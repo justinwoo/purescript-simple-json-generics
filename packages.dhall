@@ -1,24 +1,8 @@
 let upstream =
-      https://github.com/garganscript/package-sets/releases/download/v0.1.3/release.dhall
-        sha256:23abbf7e1a02f15f8efe7fcfba8cd583011b4f80343b97d51d29833fb7f193cb
+      https://github.com/purescript/package-sets/releases/download/psc-0.15.4-20220901/packages.dhall
+        sha256:f1531b29c21ac437ffe5666c1b6cc76f0a9c29d3c9d107ff047aa2567744994f
 
-let overrides = {
-  simple-json =
-    { dependencies =
-      [ "arrays"
-      , "exceptions"
-      , "foreign"
-      , "foreign-object"
-      , "nullable"
-      , "prelude"
-      , "record"
-      , "typelevel-prelude"
-      , "variant"
-      ]
-    , repo = "https://github.com/justinwoo/purescript-simple-json"
-    , version = "v9.0.0"
-    }
-}
+let overrides = {=}
 
 let additions = {=}
 
