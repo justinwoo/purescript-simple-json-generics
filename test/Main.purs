@@ -4,7 +4,7 @@ import Prelude
 
 import Data.Either (Either(..))
 import Data.Generic.Rep as GR
-import Data.Generic.Rep.Show (genericShow)
+import Data.Show.Generic (genericShow)
 import Effect (Effect)
 import Partial.Unsafe (unsafeCrashWith)
 import Simple.JSON as JSON

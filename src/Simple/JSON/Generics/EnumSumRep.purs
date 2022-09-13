@@ -7,7 +7,8 @@ import Data.Generic.Rep as GR
 import Foreign (Foreign, fail)
 import Foreign as Foreign
 import Simple.JSON as JSON
-import Type.Prelude (class IsSymbol, SProxy(..), reflectSymbol)
+import Type.Prelude (class IsSymbol, reflectSymbol)
+import Type.Proxy (Proxy(..))
 
 enumSumRep :: forall a rep
    . GR.Generic a rep
@@ -39,4 +40,4 @@ instance constructorEnumSumRep ::
        else fail <<< Foreign.ForeignError $
             "Enum string " <> s <> " did not match expected string " <> name
     where
-      name = reflectSymbol (SProxy :: SProxy name)
+      name = reflectSymbol (Proxy :: Proxy name)
