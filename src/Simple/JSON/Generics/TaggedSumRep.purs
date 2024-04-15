@@ -8,7 +8,8 @@ import Data.Generic.Rep as GR
 import Foreign (Foreign, ForeignError(..), fail)
 import Foreign as Foreign
 import Simple.JSON as JSON
-import Type.Prelude (class IsSymbol, SProxy(..), reflectSymbol)
+import Type.Prelude (class IsSymbol, reflectSymbol)
+import Type.Proxy (Proxy(..))
 
 taggedSumRep :: forall a rep
    . GR.Generic a rep
@@ -40,7 +41,7 @@ instance taggedSumRepConstructor ::
       else
         fail $ ForeignError $ "Wrong type tag " <> r."type" <> " where " <> name <> " was expected."
     where
-      nameP = SProxy :: SProxy name
+      nameP = Proxy :: Proxy name
       name = reflectSymbol nameP
 
 instance taggedSumRepArgument ::
