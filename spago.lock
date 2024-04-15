@@ -3,8 +3,12 @@ workspace:
     simple-json-generics:
       path: ./
       dependencies:
+        - control: ">=6.0.0 <7.0.0"
+        - foreign: ">=7.0.0 <8.0.0"
         - prelude: ">=6.0.1 <7.0.0"
         - simple-json: ">=9.0.0 <10.0.0"
+        - transformers: ">=6.0.0 <7.0.0"
+        - typelevel-prelude: ">=7.0.0 <8.0.0"
       test_dependencies:
         - assert
         - spec
